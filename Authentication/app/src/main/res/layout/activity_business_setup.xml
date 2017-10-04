@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.abhishek.authentication.Business_setup">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
+        android:layout_weight="2.00">
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.example.abhishek.authentication.Functions">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Enter username of employees and no. of function associated."
+                android:textStyle="italic"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add"
+                android:text="Add user"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:onClick="add_user"/>
+            <EditText
+                android:id="@+id/usr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Username   "
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fno1"
+                android:layout_gravity="center_horizontal"
+                android:hint="No."/>
+            <EditText
+                android:id="@+id/usr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Username   "
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fno2"
+                android:layout_gravity="center_horizontal"
+                android:hint="No."/>
+            <Button
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More +"
+                android:onClick="more_user"
+                android:layout_gravity="center_horizontal"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="store"
+                android:onClick="store"/>
+
+        </LinearLayout>
+</ScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Function 1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/f1"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Function 1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/f1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/f2"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/f2"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Create"
+                android:id="@+id/ct"
+                android:onClick="createf"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:layout_below="@+id/ct"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/m"
+                android:onClick="moref"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rlc">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crt"
+                android:id="@+id/bid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:hint="Enter business id"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Business name"
+                android:id="@+id/bname"
+                android:layout_below="@+id/bid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/ent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="enter"
+                android:onClick="f_launch"
+                android:layout_below="@+id/bname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>
