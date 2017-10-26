@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.abhishek.authentication.Main3Activity"
+    tools:showIn="@layout/app_bar_main3">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fun"
+        android:layout_alignParentEnd="true"
+        android:textAllCaps="true"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:elevation="10dp"/>
+    <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/cv"
+    android:background="@color/rvblue"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            android:hint="Product"
+            android:id="@+id/ed1"
+            android:background="@null"/>
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/ed1"
+            android:background="@color/gray"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            android:id="@+id/ed2"
+            android:hint="value"
+            android:background="@null"
+            android:layout_below="@+id/ed1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/ed2"
+            android:background="@color/gray"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/ed3"
+            android:hint="message"
+            android:paddingLeft="5dp"
+            android:background="@null"
+            android:layout_below="@+id/ed2"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            style="@style/Base.CardView"
+            android:onClick="update"
+            android:id="@+id/bt1"
+            android:background="@color/rvblue"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/ed3"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv"
+        android:layout_below="@+id/cv"
+        android:orientation="vertical"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
